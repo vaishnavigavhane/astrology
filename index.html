@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astrologer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    
+    </head>
+    <body>
+        <!-------------------------------------  Social Icons ---------------------------------------------->
+
+    <style>
+        .sticky-icon  {
+	z-index:999;
+	position:fixed;
+	top:50%;
+	right:0%;
+	width:220px;
+	display:flex;
+	flex-direction:column;}  
+.sticky-icon a  {
+	transform:translate(160px,0px);
+	border-radius:50px 0px 0px 50px;
+	text-align:left;
+	margin:2px;
+	text-decoration:none;
+	text-transform:uppercase;
+	padding:5px;
+	font-size:20px;
+	font-family:'Oswald', sans-serif;
+	transition:all 0.8s;}
+.sticky-icon a:hover  {
+	color:#FFF;
+	transform:translate(0px,0px);}	
+.sticky-icon a:hover i  {
+	transform:rotate(360deg);}
+/*.search_icon a:hover i  {
+	transform:rotate(360deg);}*/
+.Facebook  {
+	background-color:#2C80D3;
+	color:#FFF;}
+	
+.Youtube  {
+	background-color:green;
+	color:#FFF;}
+	
+.Twitter  {
+	background-color:#53c5ff;
+	color:#FFF;}
+	
+.Instagram  {
+	background-color:#FD1D1D;
+	color:#FFF;}
+	
+.Google  {
+	background-color:#fff;
+	color:#FFF;}						
+.sticky-icon a i {
+	background-color:#FFF;
+	height:40px;
+	width:40px;
+	color:#000;
+	text-align:center;
+	line-height:40px;
+	border-radius:50%;
+	margin-right:20px;
+	transition:all 0.5s;}
+.sticky-icon a i.fa-facebook-f  {
+	background-color:#FFF;
+	color:#2C80D3;}
+	
+.sticky-icon a i.fa-google-plus-g  {
+	background-color: lightblue;
+	color:red;}
+	
+.sticky-icon a i.fa-instagram  {
+	background-color:#FFF;
+	color:#FD1D1D;}
+	
+.sticky-icon a i.fa-youtube  {
+	background-color:#FFF;
+	color:#fa0910;}
+	
+.sticky-icon a i.fa-twitter  {
+	background-color:#FFF;
+	color:#53c5ff;}
+.fas fa-shopping-cart  {
+	background-color:#FFF;}	
+#myBtn {
+	height:50px;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  text-align:center;
+  padding:10px;
+  text-align:center;
+	line-height:40px;
+  border: none;
+  outline: none;
+  background-color: #1e88e5;
+  color: white;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.fa-arrow-circle-up  {
+	font-size:30px;}
+
+#myBtn:hover {
+  background-color: #555;
+}	
+.navbar-name{
+    color: chocolate;
+}		
+    </style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"> 
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<!--Start Sticky Icon--> 
+<div class="sticky-icon">
+   <!-- <a href="https://www.instagram.com/mankeshwariwakad?igsh=MTNiYzNiMzkwZA=="  target="_blank" class="Instagram"><i class="fab fa-instagram"></i> Instagram </a>
+   <a href="https://www.facebook.com/" target="_blank"  class="Facebook"><i class="fab fa-facebook-f"> </i> Facebook </a>
+   <a href="https://g.co/kgs/qhA6uQs" target="_blank"  class="Google"><i class="fab fa-google-plus-g"> </i> <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="" style="width : 100px; height : 30px"> </a> -->
+   <a href="#" target="_blank"  class="Youtube"><i class="fab fa-whatsapp"></i> WhatsApp </a>
+   <a href="#"  target="_blank" class="Twitter"><i class="fa fa-phone"> </i> Call </a>   
+</div>
+<!--End Sticky Icon-->
+<!-------------------------------------  Social Icons ---------------------------------------------->
+       
+        <div class="container-fluid">
+            <div class="background-vedio">
+                <video id="myVideo" width="100%" height="100%" autoplay muted loop>
+                    <source src="astro2.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            
+            <nav class="navbar navbar-expand-sm ">
+                <!-- <img src="img/logo.png" alt="Logo" style="font-size: xx-large;"  class="logo"><strong style="font-size:20px">Gurudatta Astrologer</strong> -->
+                <h2 class="navbar-name">ASTROLOGER</h2>
+                <!-- Navbar Toggler -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarid" aria-controls="navbarid" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" style="color: antiquewhite;"><i class="fa-solid fa-star-of-david fa-spin fa-spin-reverse"style="color: #a38e24;font-size:30px"></i></span>
+                </button>
+                
+                <!-- Navbar Links -->
+                <div class="collapse navbar-collapse" id="navbarid">
+                    <ul class="navbar-nav ml-auto mr-auto text-center"> 
+                        <li class="nav-item">   
+                            <a href="index.html" class="nav-link">HOME</a>
+                        </li> 
+                        <li class="nav-item">
+                            <a href="about.html" class="nav-link">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="service.html" class="nav-link">SERVICE</a>
+                        </li>
+                           
+                        <li class="nav-item">
+                            <a href="contact.html" class="nav-link">CONTACT</a>
+                        </li>
+                    </ul>
+
+                    <div class="social-media-icon text-center">
+                        <a href="" class="d"><i class="fa-brands fa-square-facebook" ></i></a>
+                        <a href="" class="d"><i class="fa-brands fa-square-instagram" ></i></a>
+                        <a href="" class="d"><i class="fa-brands fa-square-google-plus" ></i></a>
+                    </div>
+                    
+                </div>
+        </nav>
+
+
+
+
+
+
+
+            <div class="second-section">
+                <h3>ॐ दत्तात्रेय नमः  </h3>
+                <p>Astrology is a range of divinatory practices,<br> recognized as pseudoscientific since the 18th century, that propose that information about human affairs and terrestrial</p>
+               
+            </div>
+            <div class="container " style="margin-top: 200px;">
+                <div class="third-section">
+                    <form class="form">
+                        <h1 class="mr-4">Send Enquiry</h1>
+                        <input type="text" placeholder="Enter Your Name" class="input-field">
+                        <input type="email" placeholder="Enter Your Email" class="input-field">
+                        <input type="text" placeholder="Enter Message" class="input-field">
+                        <button class="submit-button btn-sm">Submit</button>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+           
+        </div>
+       
+        
+       
+
+
+   
+       <!--About Section-->
+<div class="container " style="margin-top:200px;">
+    <div style="width:100%; display: grid; justify-items: center;">
+     <h1 class=" mb-3 text-info">Best Astrologer</h1>
+     <img src="./img/line.png" class="golden-line" style="opacity: 1;">
+     <p>Astrolger  Guruji, Pandit Astrolger  Guruji situated in Dadar East, is the Best Astrologer in Mumbai with more than 25 Years of experience. We offer solutions to your problems through various practices like palm reading, Janam kundalini, Vastu, horoscope, and face reading.
+        <br><br>
+           An eminent, spiritual healer Astrolger  Guruji is the best astrologer who offers a genuine range of astrological counseling with instrumental prediction in major events of your life like Career & Jobs, Health, Property,  Foreign Tours, Promotions, Girls – Boys Attraction, Love & Passion, Business & Finance, Marriage & Compatibility, Luck & Fortune, Kundalini matching and horoscope reading. Being the best astrologer in Mumbai, we offer 100% satisfactory services and powerful predictions. We have given the best and genuine astrology services to more than 20000+ clients. He has a large client base in Dadar, throughout Mumbai, with practically all of them being satisfied and returning customers. He has never let anyone down with his efficient method and motto. Get your solutions and accurate predictions from our top astrologer.</p>
+    </div>
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-6">
+                <h2 class="text-uppercase mt-5 ">Why Astrolger  Guruji?</h2>
+               <ul>
+                <li>Recognized Top Astrologer in Mumbai.</li>
+                <li>Best-evaluated astrologer with 100% answers for every issue.</li>
+                <li>His authority has tribal roots making him an astrologer naturally.</li>
+                <li>Singular thoughtfulness for each customer</li>
+                <li>Big names trust him with their professions</li>
+               </ul>
+            </div>
+            <div class="col-lg-6  ">
+                
+                <img src="./img/about-01.jpg" alt="" width="100%" height="400px">
+            </div>
+        </div>
+    </div>
+</div> 
+<!--End About Section-->
+
+<!--Card Section Start-->
+<div class="container mt-5">
+    <div style="width:100%; display: grid; justify-items: center;">
+        <h1 class=" text-center mb-2 text-info">Services</h1>
+     <img src="./img/line.png" class="golden-line" style="opacity: 1;">
+    </div>
+    
+    <!-- <img src="./img/frame-removebg-preview.png" class="text-center" style="height: 50px;
+margin-left: 270px;"> -->
+    <div class="text-center mt-5">
+       <span><strong>Astrolger  Guruji is the best astrologer in Dadar and he can tell you anything that is about to happen to you in the near future. He also provides the optimal time to take measures and activities in order to achieve your goals without difficulty. It’s tough to judge and infer whether an astrologer is trustworthy or not merely by looking at their face. Everyone must conduct significant analysis and investigation on the internet in order to obtain exact instructions, therapeutic measures, and credible replies.</strong></span>
+    </div>
+<div class="col-lg-12">
+    <div class="row">
+        <div class="col-lg-3 mt-5">
+            <div class="card service-card">
+                <div class="card-header text-center">
+                    <img src="./img/nurology-removebg-preview.png" alt="" height="200px">
+                </div>
+                <div class="card-body service-card-body">
+                    <h6 class="card-title text-center text-info">
+                        Numerology
+                    </h6>
+                    <small class="card-content text-white">
+                        "An astrologer interprets celestial influences to guide individuals through life's journey and illuminate their path."
+                    </small>
+                </div>
+                <!-- <div class="card-footer text-center">
+                    <button class="btn btn-info btn-sm">More</button>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-lg-3 mt-5">
+            <div class="card service-card text-center">
+                <div class="card-header text-center">
+                    <img src="./img/vastu.png" alt="" height="200px">
+                </div>
+                <div class="card-body service-card-body">
+                    <h6 class="card-title text-center text-info">
+                        Vastu Sashtra
+                    </h6>
+                    <small class="card-content text-white">
+                        "An expert in Vastu Shastra, guiding individuals on their living spaces with cosmic energies for prosperity ."
+                    </small>
+                </div>
+                <!-- <div class="card-footer text-center">
+                    <button class="btn btn-info btn-sm">More</button>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-lg-3 mt-5">
+            <div class="card service-card text-center">
+                <div class="card-header">
+                    <img src="./img/kundli-birth-chart.png" alt="" height="200px">
+                </div>
+                <div class="card-body service-card-body">
+                    <h6 class="card-title text-center text-info">
+                      Kundali Match
+                    </h6>
+                    <small class="card-content text-white">
+                        "An astrologer identifies and remedies astrological imbalances in a person's birth chart for optimal life outcomes."
+                    </small>
+                </div>
+                <!-- <div class="card-footer text-center">
+                    <button class="btn btn-info btn-sm">More</button>
+                </div> -->
+            </div>
+        </div>
+        <div class="col-lg-3 mt-5">
+            <div class="card service-card text-center">
+                <div class="card-header">
+                    <style> @keyframes rotate {
+                        0% { transform: rotate(0deg); }
+                        100% { transform: rotate(360deg); }
+                    }
+                
+                    .rotate-image {
+                        animation: rotate 15s infinite linear;
+                    }</style>
+                    <img src="./img/birth.png" alt="" height="200px" class="rotate-image" >
+                </div>
+                <div class="card-body service-card-body">
+                    <h6 class="card-title text-center text-info">
+                        Birth Journal
+                    </h6>
+                    <small class="card-content text-white">
+                        "An astrologer meticulously records & analyzes birth charts to uncover insights  an individual destiny & personality."
+                    </small>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 mt-5">
+            <div class="card service-card text-center">
+                <div class="card-header" >
+                    <img src="./img/palm.png" alt="" height="200px">
+                </div>
+                <div class="card-body service-card-body">
+                    <h6 class="card-title text-center text-info">
+                        Palm Reading
+                    </h6>
+                    <small class="card-content text-white">
+                        "An astrologer adept at deciphering the lines and features of palms to reveal insights into an individual's past, present, and future."
+                    </small>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 mt-5">
+            <div class="card service-card text-center">
+                <div class="card-header">
+                    <img src="./img/horoscope-removebg-preview.png" alt="" height="200px">
+                </div>
+                <div class="card-body service-card-body">
+                    <h6 class="card-title text-center text-info">
+                        Horoscope
+                    </h6>
+                    <small class="card-content text-white">
+                        
+"An astrologer identifies and mitigates the effects of Manglik dosh, a planetary alignment believed to influence marriage and relationships."
+                    </small>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 mt-5">
+            <div class="card service-card text-center">
+                <div class="card-header">
+                    <img src="./img/nadi_shashtra-removebg-preview.png" alt="" height="170px">
+                </div>
+                <div class="card-body service-card-body">
+                    <h6 class="card-title text-center text-info">
+                        Nadi Shashtra
+                    </h6><br>
+                    <small class="card-content text-white">
+                        "An astrologer proficient in Lal Kitab, a unique system of astrology offering remedies and predictions based on<br> planetary positions and palmistry."
+                    </small>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 mt-5">
+            <div class="card service-card text-center">
+                <div class="card-header">
+                    <img src="./img/ramal shashtra.webp" alt="" height="200px">
+                </div>
+                <div class="card-body service-card-body">
+                    <h6 class="card-title text-center text-info">
+                    Ramal Shashtra
+                    </h6>
+                    <small class="card-content text-white">
+                        "An astrologer gazes into the crystal ball, channeling cosmic energies to foresee future events and offer guidance."
+                    </small>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 mt-5">
+            <div class="card service-card text-center">
+                <div class="card-header">
+                    <img src="./img/navgrah.png" alt="" height="200px">
+                </div>
+                <div class="card-body service-card-body">
+                    <h6 class="card-title text-center text-info">
+                    Navgraha Puja
+                    </h6>
+                    <small class="card-content text-white">
+                        "An astrologer gazes into the crystal ball, channeling cosmic energies to foresee future events and offer guidance."
+                    </small>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 mt-5">
+            <div class="card service-card text-center">
+                <div class="card-header">
+                    <img src="./img/hawan-removebg-preview.png" alt="" height="200px">
+                </div>
+                <div class="card-body service-card-body">
+                    <h6 class="card-title text-center text-info">
+                     Pooja & Havan
+                    </h6>
+                    <small class="card-content text-white">
+                        "An astrologer gazes into the crystal ball, channeling cosmic energies to foresee future events and offer guidance."
+                    </small>
+                     
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 mt-5">
+            <div class="card service-card text-center">
+                <div class="card-header">
+                    <img src="./img/gemstone-removebg-preview.png" alt="" height="200px">
+                </div>
+                <div class="card-body service-card-body">
+                    <h6 class="card-title text-center text-info">
+                     Gemstone
+                    </h6>
+                    <small class="card-content text-white">
+                        "An astrologer gazes into the crystal ball, channeling cosmic energies to foresee future events and offer guidance."
+                    </small>
+                     
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!--Card Section Start-->
+
+<!--  -->
+ <div class="container mt-5">
+   
+    <div style="width:100%; display: grid; justify-items: center;">
+        <h1 class=" text-center mb-2 text-info">Choose Your Zodiac Sign</h1>
+     <img src="./img/line.png" class="golden-line" style="opacity: 1;">
+    </div>
+  
+    <!-- <img src="./img/frame-removebg-preview.png" class="text-center" style="height: 50px;
+margin-left: 450px;"> -->
+    <div class="text-center mb-2">
+       <span><strong>Astrology, type of divination that involves the forecasting of earthly and human events through the observation and interpretation of the fixed stars.</strong></span>
+    </div>
+   <div class="marquee-container mt-2">
+    <div class="marquee-content">
+
+        <img class="img1" src="./img/aquarius-removebg-preview.png" alt="Image 1">
+        <img class="img1" src="./img/aries-removebg-preview.png" alt="Image 2">
+        <img class="img1" src="./img/sagittarius-removebg-preview.png" alt="Image 3">
+        <img class="img1" src="./img/cancer-removebg-preview.png" alt="Image 4">
+        <img class="img1" src="./img/capiricon-removebg-preview.png" alt="Image 5">
+        <img class="img1" src="./img/gemini-removebg-preview.png" alt="Image 6">
+        <img class="img1" src="./img/virgo-removebg-preview.png" alt="Image 7">
+        <img class="img1" src="./img/taurus-removebg-preview.png" alt="Image 8">
+        <img class="img1" src="./img/leo-removebg-preview.png" alt="Image 9">
+        <img class="img1" src="./img/libra-removebg-preview.png" alt="Image 10">
+        <img class="img1" src="./img/pisces-removebg-preview.png" alt="Image 11">
+        <img class="img1" src="./img/scorpio-removebg-preview.png" alt="Image 12">
+    </div>
+</div>
+</div> 
+
+
+<!--  -->
+
+
+
+
+
+<!------Second Card-->
+<div class="container mt-5 " >
+    
+    <div style="width:100%; display: grid; justify-items: center;">
+        <h1 class=" text-center text-info ">Our Latest News</h1>
+     <img src="./img/line.png" class="golden-line" style="opacity: 1;">
+    </div>
+   
+    <!-- <img src="./img/frame-removebg-preview.png" class="text-center line" style="height: 50px;
+margin-left: 270px;"> -->
+    
+    <p class="text-center">Astrology, type of divination that involves the forecasting of earthly and human events through the observation and interpretation of the fixed stars.</p>
+<div class="container" >
+    <div class="row " >
+        <div class="col-lg-6 col-12">
+            <div class="row" style="border:1px solid burlywood; margin-top:20px">
+                <div class="col-lg-6 text-center">
+                <img class="img-fluid" src="./img/blog-list-02.jpg" alt="" style="height: 300px; object-fit: cover;">
+               </div>
+                <div class="col-lg-6 mt-5">
+                    <h5 class="card-title">The Miracle Of Astrology.</h5>
+                    <p class="card-text">From celestial navigation to foretelling our destinies, we have got lengthy regarded to the celebs for guidance..</p>
+                    <a href="#" class="btn text-dark mb-2" style="background-color: bisque;">Read More</a>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="col-lg-1 col-12  ">
+            </div> -->
+        <div class="col-lg-6 col-12  ">
+            <div class="row " style="border:1px solid burlywood; margin-top:20px; object-fit: cover;">
+                <div class="col-lg-6 text-center">
+                <img class="img-fluid" src="./img/about-01.jpg" alt="" style="height: 300px;">
+               </div>
+                <div class="col-lg-6 mt-5">
+                    <h5 class="card-title">Five Quick Tips Regarding Astrology.</h5>
+                    <p class="card-text">From celestial navigation to foretelling our destinies, we have got lengthy regarded to the celebs for guidance..</p>
+                    <a href="#" class="btn text-dark mb-2" style="background-color: bisque;">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!---------------------------------->
+
+<!-- <div class="png-circle text-center">
+    <img src="./img/logo.png" alt="">
+</div> -->
+<!---Testiminals Start--->
+<!-- <div class="background-container"> -->
+<div class="container-fluid testiminal-container">
+   
+    <div style="width:100%; display: grid; justify-items: center;">
+        <h2 class=" text-center mt-5 text-info">What Customer Are Saying</h2>
+     <img src="./img/line.png" class="golden-line" style="opacity: 1;">
+    </div>
+   
+    <p class="text-center">Astrology, type of divination that involves the forecasting of earthly and human events through the observation and interpretation of the fixed stars.</p>
+<!-- <img src="./img/frame-removebg-preview.png" class="text-center" style="height: 50px;
+"> -->
+    <div id="testimonialCarousel" class="carousel slide mt-5" data-ride="carousel">
+    <div class="carousel-inner"> 
+        <div class="carousel-item active">  
+                <div class="row Testimonial-card-row">
+                    <div class="Testimonial-card text-center">
+                        <div class="testimonial-card-image text-center">
+                            <img class="img-fluid-testiminal" src="img/usericon-removebg-preview.png" alt="" width="17%">
+                        </div>
+                        <h2 class="text-center ">Abhijeet</h2>
+                        <p class="text-center ">Astrology can offer us a few appropriate solutions as to why this stuff take place to us and it courses us on our steps forward. If you aren't sure, always go for astrology. Not able to tell you how happy I am with astrology. Astrology has absolutely passed our expectations. Astrology is great.</p>
+                    </div>
+                </div>      
+        </div>
+        <div class="carousel-item">
+                <div class="row Testimonial-card-row">
+                    <div class="Testimonial-card text-center">
+                        <div class="testimonial-card-image text-center">
+                            <img  src="img/usericon-removebg-preview.png" alt="" width="17%">
+                        </div>
+                        <h2 class="text-center">Vaishnavi</h2>
+                        <p class="text-center">Astrology can offer us a few appropriate solutions as to why this stuff take place to us and it courses us on our steps forward. If you aren't sure, always go for astrology. Not able to tell you how happy I am with astrology. Astrology has absolutely passed our expectations. Astrology is great.</p>
+                    </div>
+                </div>
+        </div>
+        <div class="carousel-item">
+                <div class="row Testimonial-card-row">
+                    <div class="Testimonial-card text-center">
+                        <div class="testimonial-card-image text-center">
+                            <img src="img/usericon-removebg-preview.png" alt="" width="17%">
+                        </div>
+                        <h2 class="text-center">Snehal</h2>
+                        <p class="text-center">Astrology can offer us a few appropriate solutions as to why this stuff take place to us and it courses us on our steps forward. If you aren't sure, always go for astrology. Not able to tell you how happy I am with astrology. Astrology has absolutely passed our expectations. Astrology is great.</p>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    
+    <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+        <i class="fa fa-arrow-circle-left " style="font-size:48px;color:bisque"></i>
+    </a>
+    <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+        <i class="fa fa-arrow-circle-right " style="font-size:48px;color:bisque"></i>
+    </a>
+</div>
+</div>
+
+<!-- </div> -->
+
+<!----End Testiminals-->
+
+<!-- footer start -->
+<div class="footer-section " style="background-color: #0b0909; width: 96%;margin:auto;">
+    <footer >
+    
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="col-lg-4 mt-5">
+                        <img class="logo" src="img/logo.png" alt="" width="40%">
+                        <p >Astrologers, who consider that stars mysteriously direct our lives, declare it makes a super difference below what sign someone turned into born.</p>
+                        <!-- <span class="text-info"><b>Address:</b></span><p>Shop No. 2, Kumar Fun n Shop, Hind Mata Cinema Mall, Dr. Ambedkar Road, Dadar East, Mumbai - 400014</p>
+                        <span class="text-info"><b>Mobile Number</b></span><p>+91 9822115557</p> -->
+                        <div class="social-icons">
+                            <a href=""><i class="fab fa-whatsapp fa-2x mr-2" style="color: #06c11c;"></i></a>
+                            <a href=""><i class="fab fa-facebook-square fa-2x mr-2" style="color: #1c06c1;"></i></a>
+                            <a href=""><i class="fab fa-twitter-square fa-2x mr-2" style="color: #2fc2e3;"></i></a>
+                            <a href=""><i class="fab fa-instagram-square fa-2x mr-2" style="color: #d833cd;"></i></a>
+                            <a href=""><i class="fa-sharp fa-solid fa-square-phone-flip fa-rotate-90 fa-2x" style="color: rgb(4, 4, 75);"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-1"></div>
+                    <div class="col-lg-2 justify-content-center footer-link mt-5">
+                        <h4 class="text-info">Other Links</h4>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="service.html">Services</a></li>
+                               
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </div>
+                    <div class="col-lg-1"></div>
+    
+                    <div class="col-lg-4 mt-5">
+                        <h4 class="text-info">Google Map</h4>
+                        <iframe src="https://www.google.com/maps/embed?ppb=!1m18!1m12!1m3!1d3772.238339780178!2d72.83916827483178!3d19.00921643218165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cee6509cdf4d%3A0x85cc84383961cbed!2sGold%20Cinema%2C%20Hindmata%20Cinema%2C%20Dadar%20East%2C!5e0!3m2!1sen!2sin!4v1715423375509!5m2!1sen!2sin" width="100%" height="250px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <div class="col-lg-12 mt-5 Copyright text-center"><marquee behavior="scroll" direction="left" loop="infinite" class="marque-content">Copyright ©<a href="">Vaishnavi Gavhane</a><span class="ml-3">All Rights Reserved.</span></marquee></div>
+    </footer>
+</div>
+<!----End Footer --->
+
+
+        
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
